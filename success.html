@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="success-container">
+        <h2>Registration Successful!</h2>
+        <p id="welcomeMessage"></p>
+        <a href="index.html" class="btn">Click here to go home</a>
+    </div>
+
+    <script>
+        // Retrieve and display the registered name (if available)
+        document.addEventListener("DOMContentLoaded", function () {
+            var name = sessionStorage.getItem("registeredName");
+            if (name) {
+                document.getElementById("welcomeMessage").textContent = "Welcome, " + name + "!";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
